@@ -1,6 +1,6 @@
 ## Projeto sistema administrativo da plataforma e-diaristas
 
-Desenvolvido no curso Multi=Stack na treinaweb
+Desenvolvido no curso Multi-Stack na treinaweb
 
 #### Instalando o projeto
 
