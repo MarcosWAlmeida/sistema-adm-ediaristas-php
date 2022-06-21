@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ServicoRequest;
 use App\Models\Servico;
-use Illuminate\Http\Request;
 
 class ServicoController extends Controller
 {
@@ -18,13 +18,11 @@ class ServicoController extends Controller
     {
         return view('servicos.create');
     }
-    public function store(Request $request)
+    public function store(ServicoRequest $request)
     {
         $dados = $request->except('_token');
 
-
-
-        $retorno = Servico::create($dados);
+        Servico::create($dados);
 
         return redirect()->route('servicos.index');
     }
@@ -35,7 +33,7 @@ class ServicoController extends Controller
         return view('servicos.edit')->with('servico', $servico);
     }
 
-    public function update(int $id, Request $request)
+    public function update(int $id, ServicoRequest $request)
     {
         $dados = $request->except(['_token', '_method']);
 
