@@ -24,7 +24,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="posicao">Posição na plataforma</label>
-                        <input value="{{ old('posicao',$servico->posicao ?? '') }}" type="input" class="form-control" name="posicao" id="posicao" required placeholder="Posição do serviço na plataforma">
+                        <input value="{{ old('posicao',$servico->posicao ?? '') }}" type="input" class="form-control" name="posicao" data-mask="00" id="posicao" required placeholder="Posição do serviço na plataforma">
                     </div>
                 </div>
             </div>
@@ -36,19 +36,19 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="valor_minimo">Valor Mínimo</label>
-                        <input value="{{ old('valor_minimo',$servico->valor_minimo ?? '') }}" type="input" class="form-control" name="valor_minimo" id="valor_minimo" required placeholder="Valor mínimo do serviço">
+                        <input value="{{ old('valor_minimo',$servico->valor_minimo ?? '') }}" type="input" class="form-control" name="valor_minimo" data-mask="#.##0,00" data-mask-reverse="true" id="valor_minimo" required placeholder="Valor mínimo do serviço">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="quantidade_horas">Quantidade Mínima de horas</label>
-                        <input value="{{ old('quantidade_horas',$servico->quantidade_horas ?? '') }}" type="input" class="form-control" name="quantidade_horas" id="quantidade_horas" required placeholder="Quantidade mínima de horas">
+                        <input value="{{ old('quantidade_horas',$servico->quantidade_horas ?? '') }}" type="input" class="form-control" name="quantidade_horas" data-mask="0" id="quantidade_horas" required placeholder="Quantidade mínima de horas">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="porcentagem">Porcentagem de Comissão</label>
-                        <input value="{{ old('porcentagem',$servico->porcentagem ?? '') }}" type="input" class="form-control" name="porcentagem" id="porcentagem" required placeholder="porcentagem de comissão no serviço">
+                        <input value="{{ old('porcentagem',$servico->porcentagem ?? '') }}" type="input" class="form-control" name="porcentagem" data-mask="00" id="porcentagem" required placeholder="porcentagem de comissão no serviço">
                     </div>
                 </div>
             </div>
@@ -60,13 +60,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="valor_quarto">Valor por Quarto</label>
-                        <input value="{{ old('valor_quarto',$servico->valor_quarto ?? '') }}" type="input" class="form-control" name="valor_quarto" id="valor_quarto" required placeholder="Valor por quarto">
+                        <input value="{{ old('valor_quarto',$servico->valor_quarto ?? '') }}" type="input" class="form-control" name="valor_quarto" data-mask="#.##0,00" data-mask-reverse="true" id="valor_quarto" required placeholder="Valor por quarto">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="horas_quarto">Quantidade de Horas por quarto</label>
-                        <input value="{{ old('horas_quarto',$servico->horas_quarto ?? '') }}" type="input" class="form-control" name="horas_quarto" id="horas_quarto" required placeholder="Quantidade horas por quarto">
+                        <input value="{{ old('horas_quarto',$servico->horas_quarto ?? '') }}" type="input" class="form-control" name="horas_quarto" id="horas_quarto" data-mask="0" required placeholder="Quantidade horas por quarto">
                     </div>
                 </div>
             </div>
@@ -75,13 +75,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="valor_sala">Valor por sala</label>
-                        <input value="{{ old('valor_sala',$servico->valor_sala ?? '') }}" type="input" class="form-control" name="valor_sala" id="valor_sala" required placeholder="Valor por sala">
+                        <input value="{{ old('valor_sala',$servico->valor_sala ?? '') }}" type="input" class="form-control" name="valor_sala" data-mask="#.##0,00" data-mask-reverse="true" id="valor_sala" required placeholder="Valor por sala">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="horas_sala">Quantidade de horas por sala</label>
-                        <input value="{{ old('horas_sala',$servico->horas_sala ?? '') }}" type="input" class="form-control" name="horas_sala" id="horas_sala" required placeholder="Quantidade horas por sala">
+                        <input value="{{ old('horas_sala',$servico->horas_sala ?? '') }}" type="input" class="form-control" name="horas_sala" id="horas_sala" data-mask="0" required placeholder="Quantidade horas por sala">
                     </div>
                 </div>
             </div>
@@ -90,13 +90,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="valor_cozinha">Valor por banheiro</label>
-                        <input value="{{ old('valor_banheiro',$servico->valor_banheiro ?? '') }}"type="input" class="form-control" name="valor_banheiro" id="valor_banheiro" required placeholder="Valor por cozinha">
+                        <input value="{{ old('valor_banheiro',$servico->valor_banheiro ?? '') }}"type="input" class="form-control" name="valor_banheiro" data-mask="#.##0,00" data-mask-reverse="true" id="valor_banheiro" required placeholder="Valor por cozinha">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="horas_cozinha">Quantidade de horas por banheiro</label>
-                        <input value="{{ old('',$servico->horas_banheiro ?? '') }}" type="input" class="form-control" name="horas_banheiro" id="horas_banheiro" required placeholder="Quantidade horas por cozinha">
+                        <input value="{{ old('',$servico->horas_banheiro ?? '') }}" type="input" class="form-control" name="horas_banheiro" id="horas_banheiro" data-mask="0" required placeholder="Quantidade horas por cozinha">
                     </div>
                 </div>
             </div>
@@ -106,13 +106,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="valor_cozinha">Valor por cozinha</label>
-                        <input value="{{ old('',$servico->valor_cozinha ?? '') }}" type="input" class="form-control" name="valor_cozinha" id="valor_cozinha" required placeholder="Valor por cozinha">
+                        <input value="{{ old('',$servico->valor_cozinha ?? '') }}" type="input" class="form-control" name="valor_cozinha" data-mask="#.##0,00" data-mask-reverse="true" id="valor_cozinha" required placeholder="Valor por cozinha">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="horas_cozinha">Quantidade de horas por cozinha</label>
-                        <input value="{{ old('',$servico->horas_cozinha ?? '') }}" type="input" class="form-control" name="horas_cozinha" id="horas_cozinha" required placeholder="Quantidade horas por cozinha">
+                        <input value="{{ old('',$servico->horas_cozinha ?? '') }}" type="input" class="form-control" name="horas_cozinha" id="horas_cozinha" data-mask="0" required placeholder="Quantidade horas por cozinha">
                     </div>
                 </div>
             </div>
@@ -121,13 +121,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="valor_quintal">Valor por quintal</label>
-                        <input value="{{ old('',$servico->valor_quintal ?? '') }}" type="input" class="form-control" name="valor_quintal" id="valor_quintal" required placeholder="Valor por quintal">
+                        <input value="{{ old('',$servico->valor_quintal ?? '') }}" type="input" class="form-control" name="valor_quintal" data-mask="#.##0,00" data-mask-reverse="true" id="valor_quintal" required placeholder="Valor por quintal">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="horas_quintal">Quantidade de horas por quintal</label>
-                        <input value="{{ old('',$servico->horas_quintal ?? '') }}" type="input" class="form-control" name="horas_quintal" id="horas_quintal" required placeholder="Quantidade horas por quintal">
+                        <input value="{{ old('',$servico->horas_quintal ?? '') }}" type="input" class="form-control" name="horas_quintal" id="horas_quintal" data-mask="0" required placeholder="Quantidade horas por quintal">
                     </div>
                 </div>
             </div>
@@ -136,13 +136,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="valor_outros">Valor por outros tipos de cômodos</label>
-                        <input value="{{ old('',$servico->valor_outros ?? '') }}" type="input" class="form-control" name="valor_outros" id="valor_outros" required placeholder="Valor por outros">
+                        <input value="{{ old('',$servico->valor_outros ?? '') }}" type="input" class="form-control" name="valor_outros" data-mask="#.##0,00" data-mask-reverse="true" id="valor_outros" required placeholder="Valor por outros">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="horas_outros">Quantidade de horas por outros tipos de cômodos</label>
-                        <input value="{{ old('',$servico->horas_outros ?? '') }}" type="input" class="form-control" name="horas_outros" id="horas_outros" required placeholder="Quantidade horas por outros">
+                        <input value="{{ old('',$servico->horas_outros ?? '') }}" type="input" class="form-control" name="horas_outros" data-mask="0" id="horas_outros" required placeholder="Quantidade horas por outros">
                     </div>
                 </div>
             </div>
